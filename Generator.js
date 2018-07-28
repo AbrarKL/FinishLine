@@ -40,7 +40,7 @@ var fpcffpValstr = "-999120978;dis;,7,8,19;true;true;true;-60;true;24;24;true;fa
 var fpcfrCFP = Math.floor(Math.random() * (2000000000 - 1181692381 + 1)) + 1181692381;
 var fpcfrVal = Math["floor"](1E3 * Math["random"]())["toString"]();;
 module.exports = {
-	generateSensorData: function (url) {
+	generateSensorData: function (url, abckCookie) {
 		t_tst = get_cf_date();
 		tst = get_cf_date() - t_tst;
 		to();
@@ -55,6 +55,10 @@ module.exports = {
 			start = get_cf_date();
 			var step1_setup = updatet();
 			var artistTrack = "3"; //change this to abck maybe after
+			if(abckCookie != '' || abckCookie != null || abckCookie != false)
+			{
+				artistTrack = abckCookie;
+			}
 			var n = gd();
 			var a = "do_en";
 			var b = "dm_en";
